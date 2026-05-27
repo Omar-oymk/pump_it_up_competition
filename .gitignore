@@ -3,6 +3,12 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# ignore pychache files in any subdirectory
+**/__pycache__/
+
+# ignore dataset
+dataset/
+
 # C extensions
 *.so
 

@@ -1,0 +1,17 @@
+4. PremiumPulse Challenge: Predicting Financial Risk
+(Regression)
+
+4.1 Link https://www.kaggle.com/competitions/premiumpulse-risk-
+modeling/overview
+
+4.2 Challenge Description
+Develop a regression modelthat estimates the monetary cost of financial coverage
+products based on a variety of customer attributes.
+4.3 Data Description
+The data used in this challenge (training and test sets) was produced using a generative
+model inspired by real-world financial risk assessment data. While the feature distributions
+resemble those from public datasets,they have been intentionally altered. You may
+optionally compare with related open datasets to explore how differences affect
+performance or enrich your model through data augmentation.
+4.4 Features
+Columns: 43
