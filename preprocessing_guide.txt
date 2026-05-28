@@ -1,0 +1,65 @@
+summary:
+
+------------------------------------
+Drop the following columns:
+id,
+recorded_by, 
+scheme_name,
+wpt_name,
+subvillage, 
+ward,
+lga,
+date_recorded,
+quantity_group,
+payement_type,
+quality_group,
+extraction_type_group,
+waterpoint_type_group,
+management_group,
+num_private,
+scheme_management,
+installer, 
+funder, 
+
+----------------------
+# both of them are highly correlated with each other
+region_code,
+district_code,
+---------------------------------------
+
+quality_group and source_class are 
+heavily imbalanced so according to 
+the EDA we can drop them as well
+as they can introduce noise
+---------------------------------------
+public_meeting can be dropped
+
+=====================================
+
+quantity, payement, waterpoint_type, source_class and extraction_type_class
+management, water_quality, gps_height
+
+are the strongest predictors
+
+use latitude and longtitiude separately as they dont give any insights when used together
+======================================
+extract year from date_recorded 
+do extracted_year - construction_year to get the age of the pump
+drop date_recorded
+
+first handle construction year
+fill missing years with median because 
+it has a lot of missing values and filling it with median 
+will not introduce much bias in the data
+
+
+=======================================
+amount_tsh, population
+needs to be handled numerically if we want to use them in the model
+=======================================
+
+
+
+we will need to scale the values
+only if we will use a model that is sensitive to the scale of the data
+like logistic regression, svm, knn
