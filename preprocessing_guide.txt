@@ -63,3 +63,19 @@ needs to be handled numerically if we want to use them in the model
 we will need to scale the values
 only if we will use a model that is sensitive to the scale of the data
 like logistic regression, svm, knn
+
+
+=======================================
+
+look at the categorical variables that will not be dropped
+if they are nominal or ordinal
+if nominal use one hot encoding (if cardinality is not that high)
+else use label encoding
+
+
+for scaling
+check for outliers
+if they are present use robust scaler
+else use standard scaler no need to use min max scaler as we dont have any features
+that are bounded between 0 and 1
+and we wont train a neural network that is prefers min max scaler for now
