@@ -8,7 +8,8 @@ __pycache__/
 
 # ignore dataset
 dataset/
-
+submissions/
+/notebooks/catboost_info/
 # C extensions
 *.so
 
